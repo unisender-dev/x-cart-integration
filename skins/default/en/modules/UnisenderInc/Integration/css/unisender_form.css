@@ -1,0 +1,8 @@
+.unisenderSubscribe input {
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.unisenderSubscribe .table-value, .unisenderSubscribe .input-field-wrapper {
+	width: 100%;
+}

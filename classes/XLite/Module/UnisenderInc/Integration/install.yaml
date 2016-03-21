@@ -1,0 +1,147 @@
+XLite\Model\Config:
+  - name: apiKey
+    category: UnisenderInc\Integration
+    type: text
+    orderby: 20
+    value: ''
+    translations:
+      - code: en
+        option_name: Unisender API Key
+        option_comment: This key can be found on your account settings page Unisender
+      - code: ru
+        option_name: Unisender API ключ
+        option_comment: Данный ключ вы можете найти на странице настройки аккаунта Unisender
+
+  - name: defaultListId
+    category: UnisenderInc\Integration
+    type: XLite\Module\UnisenderInc\Integration\View\FormField\Select\Lists
+    orderby: 30
+    translations:
+      - code: en
+        option_name: Default List
+        option_comment: The list, which is used if not specified other lists
+      - code: ru
+        option_name: Список по умолчанию
+        option_comment: Список, использующийся, если не заданы иные списки
+
+  - name: subOnRegister
+    category: UnisenderInc\Integration
+    type: checkbox
+    orderby: 40
+    value: true
+    translations:
+      - code: en
+        option_name: Include subscription at registration
+        option_comment: Automatic subscription at registration
+      - code: ru
+        option_name: Включить подписку при регистрации
+        option_comment: Автоматическая подписка при регистрации
+
+  - name: registerListId
+    category: UnisenderInc\Integration
+    type: XLite\Module\UnisenderInc\Integration\View\FormField\Select\Lists
+    orderby: 50
+    translations:
+      - code: en
+        option_name: List for registrants
+      - code: ru
+        option_name: Список для регистрирующихся
+
+  - name: subOnCheckout
+    category: UnisenderInc\Integration
+    type: checkbox
+    orderby: 60
+    value: true
+    translations:
+      - code: en
+        option_name: Include subscription at checkout
+        option_comment: Automatic subscription when ordering
+      - code: ru
+        option_name: Включить подписку при покупке
+        option_comment: Автоматическая подписка при покупке
+
+  - name: checkoutListId
+    category: UnisenderInc\Integration
+    type: XLite\Module\UnisenderInc\Integration\View\FormField\Select\Lists
+    orderby: 70
+    translations:
+      - code: en
+        option_name: List for buyers
+      - code: ru
+        option_name: Список для покупателей
+
+  - name: enableForm
+    category: UnisenderInc\Integration
+    type: checkbox
+    orderby: 80
+    value: true
+    translations:
+      - code: en
+        option_name: Show subscription form
+      - code: ru
+        option_name: Показывать форму подписки
+
+  - name: formTitle
+    category: UnisenderInc\Integration
+    type: text
+    orderby: 90
+    value: ''
+    translations:
+      - code: en
+        option_name: Title of block with form
+      - code: ru
+        option_name: Заголовок блока с формой подписки
+
+  - name: formWeight
+    category: UnisenderInc\Integration
+    type: XLite\View\FormField\Input\Text\Integer
+    widgetParameters: { min: 1, max: 20 }
+    orderby: 100
+    value: 20
+    translations:
+      - code: en
+        option_name: Weight of block
+        option_comment: Specifies the position of the block relative to other blocks. Requires reboot cache.
+      - code: ru
+        option_name: Вес блока
+        option_comment: Задает положение блока относительно других блоков. Требуется перегрузить кеш.
+
+  - name: formSuccessMessage
+    category: UnisenderInc\Integration
+    type: text
+    orderby: 110
+    value: ''
+    translations:
+      - code: en
+        option_name: Message about the successful subscription
+      - code: ru
+        option_name: Сообщение об успешной подписке
+
+\XLite\Model\LanguageLabel:
+  - { name: "unisenderHelpUrlTitle", translations: [{ code: ru, label: "Детальное руководство по интеграции" }, { code: en, label: "Detailed guidance of the integration" }] }
+  - { name: "wrongApiKey", translations: [{ code: ru, label: "API ключ не может быть пустым" }, { code: en, label: "API key can not be blank" }] }
+  - { name: "invalid_api_key", translations: [{ code: ru, label: "Неверный API ключ" }, { code: en, label: "Wrong API key" }] }
+  - { name: "saved", translations: [{ code: ru, label: "Настройки сохранены" }, { code: en, label: "Settings saved" }] }
+
+  - { name: "email", translations: [{ code: ru, label: "E-mail" }, { code: en, label: "E-mail" }] }
+  - { name: "phone", translations: [{ code: ru, label: "Телефон" }, { code: en, label: "Phone" }] }
+  - { name: "name", translations: [{ code: ru, label: "Имя" }, { code: en, label: "Name" }] }
+
+  - { name: "subscriptionSuccess", translations: [{ code: ru, label: "Спасибо за доверие!" }, { code: en, label: "Thank you for your trust!" }] }
+  - { name: "sub_error", translations: [{ code: ru, label: "Произошла ошибка: " }, { code: en, label: "An error has occurred: " }] }
+
+  - { name: "connection", translations: [{ code: ru, label: "Соединение" }, { code: en, label: "Connection" }] }
+  - { name: "subscribe", translations: [{ code: ru, label: "Подписаться" }, { code: en, label: "Subsrcribe" }] }
+  - { name: "form", translations: [{ code: ru, label: "Форма" }, { code: en, label: "Form" }] }
+
+  - { name: "username", translations: [{ code: ru, label: "Логин" }, { code: en, label: "Username" }] }
+  - { name: "firstname", translations: [{ code: ru, label: "Имя" }, { code: en, label: "First name" }] }
+
+  - { name: "unisenderRegistration", translations: [{ code: ru, label: "Новый аккаунт Unisender" }, { code: en, label: "New Unsender account" }] }
+  - { name: "registrationInfo", translations: [{ code: ru, label: "Воспользуйтесь формой быстрой регистрации в системе Unisender:" }, { code: en, label: "Use the form of quick registration in Unisender:" }] }
+
+  - { name: "existingAccount", translations: [{ code: ru, label: "Существующий аккаунт Unisender" }, { code: en, label: "Existing Unisender account" }] }
+  - { name: "enterExistingKey", translations: [{ code: ru, label: "Если вы уже зарегистрированы в Unisender, введите свой API ключ:" }, { code: en, label: "Or enter an existing key." }] }
+  - { name: "getApiKeyInfo", translations: [{ code: ru, label: "В настройках аккаунта на странице <a target=\"_blank\" href=\"{{X}}\">Интеграция и API</a> необходимо включить доступ к API, скопировать Ваш API ключ и сохранить его в настройках ниже." }, { code: en, label: "In the account settings page <a target=\"_blank\" href=\"{{X}}\"> Integration and API </a> need to enable access to the API, copy your API key and save it in the settings below." }] }
+
+  - { name: "getNewAffiliateAccountInfo", translations: [{ code: ru, label: "Если вы еще не зарегистрированы в системе Unisender, можете перейти по <a target=\"_blank\" href=\"{{X}}\">Ссылке на страницу регистрации</a>." }, { code: en, label: "If you are not registered in the system Unisender, you can go to <a target=\"_blank\" href=\"{{X}}\">Registration page</a>." }] }
