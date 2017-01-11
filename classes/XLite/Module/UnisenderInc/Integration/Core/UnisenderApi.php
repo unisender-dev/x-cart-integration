@@ -139,7 +139,7 @@ class UnisenderApi extends \XLite\Base\Singleton
     {
         $lang = \XLite\Core\Session::getInstance()->getLanguage()->getCode();
         $lang = $lang == 'ru' ? 'ru' : 'en';
-        $url = 'http://api.unisender.com/' . $lang . '/api/';
+        $url = 'https://api.unisender.com/' . $lang . '/api/';
         return $url;
     }
 }
