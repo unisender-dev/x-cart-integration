@@ -1,0 +1,14 @@
+{% if not this.isConnected() %}
+<br>
+<div class="alert alert-warning">
+		{{ t('wrongApiKey') }}
+	</div>
+{% endif %}
+
+<div class="settings general-settings settings-unisender">
+	{{ widget('\\XLite\\Module\\UnisenderInc\\Integration\\View\\Model\\Settings', useBodyTemplate='1') }}
+</div>
+
+<div class="helpBlock">
+    <a target="_blank" href="{{ this.getHelpUrl() }}">{{ t('unisenderHelpUrlTitle') }}</a>
+</div>

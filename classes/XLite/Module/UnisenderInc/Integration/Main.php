@@ -20,7 +20,7 @@ abstract class Main extends \XLite\Module\AModule
      */
     public static function getMajorVersion()
     {
-        return '5.2';
+        return '5.3';
     }
 
     /**

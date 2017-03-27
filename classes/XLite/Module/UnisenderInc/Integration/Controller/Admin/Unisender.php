@@ -99,6 +99,15 @@ class Unisender extends \XLite\Controller\Admin\Module
         $defaultListId = Integration\Core\Settings::getInstance()->getDefaultListId();
 
         $newDefaultListId = \XLite\Core\Request::getInstance()->defaultListId;
+
+        // For first save
+        if (empty($newDefaultListId)) {
+            $api = Integration\Core\UnisenderApi::getInstance();
+            $lists = $api->getLists();
+            $keys = array_keys($lists);
+            $newDefaultListId = $keys[0];
+        }
+        
         if (!empty($newDefaultListId) && $defaultListId !== $newDefaultListId) {
             Integration\Core\Settings::getInstance()->saveSettings(array(
                 'defaultListId' => $newDefaultListId

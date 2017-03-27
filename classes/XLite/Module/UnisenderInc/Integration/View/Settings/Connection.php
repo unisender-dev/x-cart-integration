@@ -17,7 +17,7 @@ class Connection extends Integration\View\Settings\ASettings
      */
     protected function getDefaultTemplate()
     {
-        return $this->getDir() . '/connection.tpl';
+        return $this->getDir() . '/connection.twig';
     }
 
     /**

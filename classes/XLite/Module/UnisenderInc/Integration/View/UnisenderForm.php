@@ -56,4 +56,14 @@ class UnisenderForm extends \XLite\View\SideBarBox
 
         return $list;
     }
+
+    /**
+     * Check if widget is visible
+     *
+     * @return boolean
+     */
+    protected function isVisible()
+    {
+		return \XLite\Core\Config::getInstance()->UnisenderInc->Integration->enableForm;
+    }
 }
