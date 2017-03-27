@@ -47,7 +47,7 @@ class Tabs extends Integration\View\Settings\ASettings
      */
     protected function getDefaultTemplate()
     {
-        return $this->getDir() . '/tabs.tpl';
+        return $this->getDir() . '/tabs.twig';
     }
 
     /**

@@ -30,6 +30,22 @@ class Settings extends \XLite\View\Model\ModuleSettings
         return $formFields;
     }
 
+    protected function getFormFieldsForSection($section)
+    {
+        $formFields = parent::getFormFieldsForSection($section);
+        $sectionFields = Integration\Core\Settings::getInstance()
+            ->getFieldsForSection(\XLite\Core\Request::getInstance()->section);
+
+        foreach ($formFields as $field => $data) {
+            // Remove fields from other sections
+            if (!in_array($field, $sectionFields)) {
+                unset($formFields[$field]);
+            }
+        }
+
+        return $formFields;
+    }
+
     /**
      * Get editable options
      *

@@ -1,0 +1,17 @@
+<div class="settings general-settings settings-unisender">
+
+    {% if not this.isConnected() %}
+        <h3>{{ t('unisenderRegistration') }}</h3>
+        <div class="">{{ t('getNewAffiliateAccountInfo', {'X': this.getNewAffiliateAccountUrl()})|raw }}</div>
+        <div class="clear" style="height: 20px;"></div>
+        <h3>{{ t('existingAccount') }}</h3>
+        {{ t('getApiKeyInfo', {'X': this.getApiConfigUrl()})|raw }}<br>
+    {% endif %}
+
+    {{ widget('\\XLite\\Module\\UnisenderInc\\Integration\\View\\Model\\Settings', useBodyTemplate='1') }}
+
+</div>
+
+<div class="helpBlock">
+    <a target="_blank" href="{{ this.getHelpUrl() }}">{{ t('unisenderHelpUrlTitle') }}</a>
+</div>

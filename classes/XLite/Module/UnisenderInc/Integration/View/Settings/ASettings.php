@@ -23,7 +23,7 @@ abstract class ASettings extends \XLite\View\AView
      */
     protected function getDefaultTemplate()
     {
-        return $this->getDir() . '/form.tpl';
+        return $this->getDir() . '/form.twig';
     }
 
     /**

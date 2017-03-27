@@ -1,0 +1,12 @@
+<div class="tabbed-content-wrapper">
+	<div class="page-tabs clearfix">
+		<ul>
+			{% for tabPage in this.getTabs() %}
+     <li class="tab{% if tabPage.isActive %}-current{% endif %}">
+  				<a href="{{ tabPage.url|raw }}">{{ t(tabPage.title) }}</a>
+  			</li>
+   {% endfor %}
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
